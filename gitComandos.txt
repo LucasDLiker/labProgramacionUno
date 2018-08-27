@@ -10,4 +10,10 @@ cuando trabajo con un repositorio web
 git clone repositorio
 PASOS A SEGUIR PARA CADA COMMIT 
 
+1- git status
+2- git add
+3- git commit -m "mensaje"
+
+
+
 
