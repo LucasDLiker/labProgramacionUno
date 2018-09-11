@@ -23,6 +23,10 @@ son vectores que se corresponden entre si en donde cada elemento de un vector ti
  *muestre los alumnos aprobados cuando la nota es mayor a 6.-
  *qe muestre los alumnos que se llaman juan
  *que muestre los alumnos cuyo nombre comienzan con P.-
+ * el alumno con mas nota (sabiendo que puede ser mas de uno).-
+ * el mas mediocre: legajo 100, nota 5, se llama pepe y mide 1.75.-
+ *ingresar un legajo y permitir la modificacion de la nota.
+ *tramspfr,ar ña carga de datps em ima carga aleatoria.-
 
 */
 
