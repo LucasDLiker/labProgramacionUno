@@ -19,7 +19,16 @@ son vectores que se corresponden entre si en donde cada elemento de un vector ti
 
  trabajar con los 3 datos: Legajo, Alumno y Nota
 
+ *ordenar por nombre alfabeticamente.-
+ *muestre los alumnos aprobados cuando la nota es mayor a 6.-
+ *qe muestre los alumnos que se llaman juan
+ *que muestre los alumnos cuyo nombre comienzan con P.-
+
 */
+
+//prototipos
+
+void cargarAlumnos (int[], char [][21], int notas [], float alturas []);
 int main()
 {
 
@@ -27,9 +36,22 @@ int main()
     char nombres[T][21];
     int notas[T];
     float alturas[T];
+    char mail [T] [50];
     int i;
 
-    for(i=0 ;i<T;i++)
+    cargarAlumnos(legajos, nombres, notas, alturas, T);
+
+
+
+
+
+    return 0;
+}
+
+void cargarAlumnos (int[], char [][21], int notas [], float alturas [])
+{
+
+       for(i=0 ;i<T;i++)
     {
         printf("Ingrese legajo: ");
         scanf("%d", &legajos[i]);
@@ -41,9 +63,11 @@ int main()
         printf("Ingrese altura: ");
         scanf("%f", &alturas);
 
+
+
     }
 
-    printf("%4d","  "legajo",   "nombre",   "nota",   "altura");
+    printf("%4d", "%20s", "%2d", "%5f",  "legajo",   "nombre",   "nota",   "altura");
 
     for (i=0; i<T; i++)
     {
@@ -51,9 +75,6 @@ int main()
     }
 
 
-
-
-    return 0;
 }
 
 
