@@ -6,11 +6,7 @@
 #include "arrayPeliculas.h"
 #include "arrayDirectores.h"
 #include "funciones.h"
-#define ILOGIC -1
-#define EMPTY 0
-#define FULL 1
-#define INACTIVE 0
-#define MAX 1000
+
     /**Inicializar Pelicula **/
 
     int initPelicula(sPeliculas* arrayPeliculas, int capacidad)
@@ -97,6 +93,7 @@
             strcpy(arrayPeliculas[index].directorPelicula, auxDirectorPelicula);
             strcpy(arrayPeliculas[index].nacionalidadPelicula, auxNacionalidadPelicula);
             arrayPeliculas[index].anoPelicula = auxAnoPelicula;
+            arrayPeliculas[index].isEmpty = EMPTY;
 
             ret = EMPTY;
 
@@ -119,10 +116,10 @@
     char opcion;
     int auxId;
 
-    printf("\n Ingresar ID de la pelicula que desea modificar:  \n");
+     printf("\n Ingrese el ID de la pelicula a dar de baja \n");
     scanf("%d", &auxId);
     int idPelicula=buscarPeliculaPorID(arrayPeliculas, MAX, auxId);
-    if (idPelicula>0)
+    if (idPelicula>=0)
     {
         printf("\n Se ha encontrado el ID, modifique a continuacion: \n");
 
@@ -216,7 +213,7 @@
 {
     int ret = ILOGIC;
     int i;
-    printf("\n%3s %11s %10s %15s %15s \n", "ID","NOMBRE","DIRECTOR","NACIONALIDAD","AÑO");
+    printf("\n%3s %11s %10s %15s %15s \n", "ID","NOMBRE","DIRECTOR","NACIONALIDAD","FECHA");
     for(i = 0; i < cantidad; i++)
     {
         if(arrayPeliculas[i].isEmpty == 0)
@@ -232,9 +229,41 @@
     {
         int menuOption;
         fflush(stdin);
-        printf("\n\n***MENU***\n\n -1 Dar de Alta Pelicula: \n -2 Modificar pelicula: \n -3 Dar de Baja pelicula: \n -4 Lista\n -5 Presione (5) para salir: \n");
+        //printf("\n\n***MENU***\n\n -1 Dar de Alta Pelicula: \n -2 Modificar pelicula: \n -3 Dar de Baja pelicula: \n -4 Dar de alta director \n -5 Presione (5) para salir: \n");
+        printf("\n  1- Dar de alta Pelicula \n");
+        printf("\n  2- Modificar Pelicula \n");
+        printf("\n  3- Dar de Baja Pelicula \n");
+        printf("\n  4- Dar de Alta Director \n");
+        printf("\n  5- Dar de Baja Director \n");
+        printf("\n  6- Listar \n");
+        printf("\n  7- Salir \n");
+
         fflush(stdin);
         scanf("%d", &menuOption);
         return menuOption;
     }
 
+    int subMenu()
+    {
+    int opcion;
+    fflush(stdin);
+    printf("1. Mostrar lista peliculas\n"
+           "2. Mostrar lista directores\n"
+           "Ingrese una opcion: ");
+    fflush(stdin);
+    scanf("%d", &opcion);
+
+    while(opcion < 0 || opcion > 2)
+    {
+        printf("Por favor, ingrese una opcion valida\n");
+        system("pause");
+        system("cls");
+        fflush(stdin);
+        printf( "1. Mostrar lista peliculas\n"
+                "2. Mostrar lista directores\n"
+                "Ingrese una opcion: ");
+        fflush(stdin);
+        scanf("%d", &opcion);
+    }
+    return opcion;
+}

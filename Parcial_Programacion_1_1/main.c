@@ -17,18 +17,33 @@ int main()
     char auxNombre[51];
     char auxDirector[51];
     char auxNacionalidad[51];
+    char auxNombreDirector[51];
+    char auxPaisDirector[51];
+    int auxIdDirector;
+    int auxFechaDirector;
     int auxId;
     int auxAno;
     int menuOption;
+    int opcion;
     int freeSlot;
+    int freeSlotDirector;
     int validar=0;
+    int validarDirector=0;
 
 
     sPeliculas arrayPeliculas[MAX];
     initPelicula(arrayPeliculas, MAX);
+    sDirectores arrayDirectores[MAXB];
+    initDirector(arrayDirectores, MAXB);
 
 
-    while(menuOption != 5)
+    if(validar==0)
+    {
+    addPelicula(arrayPeliculas, MAX, auxId, "Lucas", "Liker", "Argentina", 2010);
+    addPelicula(arrayPeliculas, MAX, auxId, "Pepito", "Pepin", "Venezuela", 1995);
+    validar++;
+      }
+    while(menuOption != 7)
     {
         menuOption = menuOptions();
         switch(menuOption)
@@ -72,18 +87,58 @@ int main()
             }
             break;
             case 4:
-            if(validar > 0)
+            freeSlotDirector=buscarLibreDirector(arrayDirectores, MAXB);
+            validarDirector++;
+            if(freeSlotDirector != ILOGIC)
             {
-                mostrarPelicula(arrayPeliculas, MAX);
+                getValidString("\n Ingrese el nombre del director: ", "\nError. Solo se permiten letras, vuelva a ingresar el nombre: \n", auxNombreDirector);
+                getValidString("\n ingrese su pais de origen: ", "\nError, Solo se permiten letras, vuelva a ingresar el apellido: \n", auxPaisDirector);
+                auxFechaDirector=getValidInt("\n Ingrese el año de nacimiento (1900 - 2018): ", "\nError, el dato es invalido\n", 1900, 2018);
+            }
+            else
+            {
+                 printf("\n No hay mas espacio para ingresar datos.- \n");
+                 system("pause");
+                 system("cls");
+            }
+            addDirector(arrayDirectores, MAXB, auxIdDirector, auxNombreDirector, auxPaisDirector, auxFechaDirector);
+            break;
+            case 5:
+            if(validarDirector > 0)
+            {
+                bajaDirector(arrayDirectores, MAXB, auxIdDirector);
+            }
+            else{
+                printf("No hay datos para eliminar");
+            }
+            break;
+            case 6:
+            if(validar > 0 || validarDirector > 0)
+            {
+                opcion= subMenu();
+                switch(opcion)
+                {
+                case 1:
+                 mostrarPelicula(arrayPeliculas, MAX);
+                 system("pause");
+                 system("cls");
+                 break;
+                case 2:
+                mostrarDirector(arrayDirectores, MAXB);
                 system("pause");
                 system("cls");
+                break;
+                }
+
             }
             else
             {
                 printf("No hay datos para mostrar");
+                system("pause");
+                system("cls");
             }
             break;
-            case 5:
+            case 7:
             printf("auf wiedersehen/Hasta Pronto...");
             break;
             default:
