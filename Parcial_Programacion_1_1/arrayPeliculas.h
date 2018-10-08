@@ -40,3 +40,6 @@ int bajaPelicula(sPeliculas* arrayPeliculas, int capacidad, int id);
 int menuOptions();
 
 int subMenu();
+
+void peliculasViejas(sPeliculas arrayPeliculas[], int capacidad);
+int mostrarPeliculasViejas(sPeliculas* arrayPeliculas, int cantidad);
