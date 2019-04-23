@@ -9,3 +9,15 @@
 1555946157 source:c:\users\alumno\desktop\abm\empleado.c
 	"Empleado.h"
 
+1556023252 source:d:\liker lucas\gilada\abm uno a muchos\do.c
+
+1556024270 source:d:\liker lucas\gilada\abm uno a muchos\main.c
+	<stdlib.h>
+	"Empleado.h"
+
+1556024245 d:\liker lucas\gilada\abm uno a muchos\empleado.h
+	<stdio.h>
+
+1556024870 source:d:\liker lucas\gilada\abm uno a muchos\empleado.c
+	"Empleado.h"
+

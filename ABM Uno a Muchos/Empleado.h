@@ -38,7 +38,7 @@ typedef struct
 } eEmpleado;
 
 void mostrarEmpleado(eEmpleado, eSector[], int);
-void cargarEmpleado(eEmpleado[], int);
+void cargarEmpleado(eEmpleado[], int, eSector[], int);
 void mostrarListaEmpleados(eEmpleado[], int, eSector[], int);
 
 int buscarLibre(eEmpleado[], int);

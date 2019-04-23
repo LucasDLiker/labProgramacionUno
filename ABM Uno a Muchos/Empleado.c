@@ -2,27 +2,40 @@
 #include "Empleado.h"
 
 
-void cargarEmpleado(eEmpleado lista[], int tam)
+void cargarEmpleado(eEmpleado listaE[], int te, eSector listS[], int ts)
 {
     int i;
+    int j;
 
-    i = buscarLibre(lista, tam);
+    i = buscarLibre(listaE, te);
     if(i!=-1)
     {
         printf("Ingrese legajo: ");
-        scanf("%d", &lista[i].legajo);
+        scanf("%d", &listaE[i].legajo);
         printf("Ingrese nombre: ");
         fflush(stdin);
-        gets(lista[i].nombre);
+        gets(listaE[i].nombre);
         printf("Ingrese sexo: ");
         fflush(stdin);
-        scanf("%c", &lista[i].sexo);
+        scanf("%c", &listaE[i].sexo);
+
+        printf("Elija sector: \n");
+
+        for(j=0;j<ts;j++)
+        {
+            printf("%d. \t%s\n", listS[j].idSector);
+        }
+
+        scanf("%d", &listaE[i].idSector);
+
         printf("Ingrese sueldo bruto: ");
-        scanf("%f", &lista[i].sueldoBruto);
+        scanf("%f", &listaE[i].sueldoBruto);
 
-        lista[i].sueldoNeto =lista[i].sueldoBruto*0.85;
+        listaE[i].sueldoNeto =listaE[i].sueldoBruto*0.85;
 
-        lista[i].estado = OCUPADO;
+        listaE[i].estado = OCUPADO;
+
+        //igualar el id de listae con listas
 
     }
     else
@@ -250,9 +263,9 @@ int contarCarlos(eEmpleado lista[], int tam)
 
 
 
-int buscarLegajo(eEmpleado lista[], int tam, int legajo)
+/*int buscarLegajo(eEmpleado lista[], int tam, int legajo)
 {
 
-}
+}*/
 
 

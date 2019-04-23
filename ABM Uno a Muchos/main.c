@@ -16,7 +16,6 @@ Informes:
 
 int main()
 {
-
     int indice;
     int opcion;
 
@@ -35,7 +34,7 @@ hardcodearDatosEmpleados(lista,6);
         switch(opcion)
         {
             case 1:
-                cargarEmpleado(lista,  T);
+                cargarEmpleado(lista,  T, sectores, 3);
 
             break;
             case 2:
