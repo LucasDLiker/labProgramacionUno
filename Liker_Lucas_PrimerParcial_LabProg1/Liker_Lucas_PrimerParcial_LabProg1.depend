@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1557242202 source:d:\liker lucas\liker_lucas_primerparcial_labprog1\arraypeliculas.c
+	"arrayPeliculas.h"
+
+1557242154 d:\liker lucas\liker_lucas_primerparcial_labprog1\arraypeliculas.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<string.h>
+
+1557231096 source:d:\liker lucas\liker_lucas_primerparcial_labprog1\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1557242342 source:d:\liker lucas\liker_lucas_primerparcial_labprog1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<string.h>
+	"arrayPeliculas.h"
+	"funciones.h"
+	"actores.h"
+
+1557231096 d:\liker lucas\liker_lucas_primerparcial_labprog1\funciones.h
+
+1557242194 source:d:\liker lucas\liker_lucas_primerparcial_labprog1\actores.c
+	"actores.h"
+
+1557242154 d:\liker lucas\liker_lucas_primerparcial_labprog1\actores.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<string.h>
+
