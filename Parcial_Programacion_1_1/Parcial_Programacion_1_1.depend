@@ -65,7 +65,7 @@
 	<time.h>
 	<string.h>
 
-1538969312 source:c:\users\capitan hostias\desktop\lab i - programación i\parcial_numero_1\labprogramacionuno\parcial_programacion_1_1\main.c
+1538970279 source:c:\users\capitan hostias\desktop\lab i - programación i\parcial_numero_1\labprogramacionuno\parcial_programacion_1_1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -75,7 +75,7 @@
 	"arrayDirectores.h"
 	"funciones.h"
 
-1538998992 source:d:\liker lucas\labprogramacionuno\parcial_programacion_1_1\arraydirectores.c
+1538969780 source:c:\users\capitan hostias\desktop\abm\parcial_programacion_1_1\arraydirectores.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -85,13 +85,13 @@
 	"arrayDirectores.h"
 	"funciones.h"
 
-1539006659 d:\liker lucas\labprogramacionuno\parcial_programacion_1_1\arraypeliculas.h
+1538968406 c:\users\capitan hostias\desktop\abm\parcial_programacion_1_1\arraypeliculas.h
 
-1538998992 d:\liker lucas\labprogramacionuno\parcial_programacion_1_1\arraydirectores.h
+1538966846 c:\users\capitan hostias\desktop\abm\parcial_programacion_1_1\arraydirectores.h
 
-1538998992 d:\liker lucas\labprogramacionuno\parcial_programacion_1_1\funciones.h
+1538610297 c:\users\capitan hostias\desktop\abm\parcial_programacion_1_1\funciones.h
 
-1539006630 source:d:\liker lucas\labprogramacionuno\parcial_programacion_1_1\arraypeliculas.c
+1538968880 source:c:\users\capitan hostias\desktop\abm\parcial_programacion_1_1\arraypeliculas.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -101,13 +101,13 @@
 	"arrayDirectores.h"
 	"funciones.h"
 
-1538998992 source:d:\liker lucas\labprogramacionuno\parcial_programacion_1_1\funciones.c
+1538955260 source:c:\users\capitan hostias\desktop\abm\parcial_programacion_1_1\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
 
-1539006298 source:d:\liker lucas\labprogramacionuno\parcial_programacion_1_1\main.c
+1538970279 source:c:\users\capitan hostias\desktop\abm\parcial_programacion_1_1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

@@ -21,3 +21,15 @@
 1556024870 source:d:\liker lucas\gilada\abm uno a muchos\empleado.c
 	"Empleado.h"
 
+1556829988 source:c:\users\capitan hostias\desktop\abm\abm uno a muchos\do.c
+
+1557193460 source:c:\users\capitan hostias\desktop\abm\abm uno a muchos\empleado.c
+	"Empleado.h"
+
+1556829988 c:\users\capitan hostias\desktop\abm\abm uno a muchos\empleado.h
+	<stdio.h>
+
+1556829988 source:c:\users\capitan hostias\desktop\abm\abm uno a muchos\main.c
+	<stdlib.h>
+	"Empleado.h"
+

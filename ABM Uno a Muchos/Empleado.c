@@ -1,6 +1,17 @@
 
 #include "Empleado.h"
 
+/**Generar Nuevo ID**/
+
+    static int nuevoIdSomething()
+    {
+    static int nuevoID=MAX;
+
+    nuevoID ++;
+
+    return nuevoID;
+}
+
 
 void cargarEmpleado(eEmpleado listaE[], int te, eSector listS[], int ts)
 {
@@ -224,7 +235,7 @@ float buscarSueldoMaximo(eEmpleado lista[], int tam)
     return maximo;
 
 }
-void mostrarEmpleadosSueldoMaximo(eEmpleado lista[], int tam)
+/*void mostrarEmpleadosSueldoMaximo(eEmpleado lista[], int tam)
 {
     float maximo;
     int i;
@@ -240,7 +251,7 @@ void mostrarEmpleadosSueldoMaximo(eEmpleado lista[], int tam)
         }
     }
 
-}
+}*/
 
 int contarCarlos(eEmpleado lista[], int tam)
 {

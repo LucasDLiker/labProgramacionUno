@@ -31,7 +31,6 @@ int main()
     int validarDirector=0;
 
 
-
     sPeliculas arrayPeliculas[MAX];
     initPelicula(arrayPeliculas, MAX);
     sDirectores arrayDirectores[MAXB];
@@ -40,17 +39,10 @@ int main()
 
     if(validar==0)
     {
-    addPelicula(arrayPeliculas, MAX, auxId, "Venom", "Richards", "EstadosUnidos", 2018);
-    addPelicula(arrayPeliculas, MAX, auxId, "Django", "Tarantino", "EstadosUnidos", 2008);
+    addPelicula(arrayPeliculas, MAX, auxId, "Lucas", "Liker", "Argentina", 2010);
+    addPelicula(arrayPeliculas, MAX, auxId, "Pepito", "Pepin", "Venezuela", 1995);
     validar++;
-    }
-    if(validarDirector==0)
-    {
-    addDirector(arrayDirectores, MAXB, auxIdDirector, "Richards", "EstadosUnidos", 1982);
-    addDirector(arrayDirectores, MAXB, auxIdDirector, "Tarantino", "EstadosUnidos", 1954);
-    validarDirector++;
-    }
-
+      }
     while(menuOption != 7)
     {
         menuOption = menuOptions();
@@ -59,31 +51,24 @@ int main()
             case 1:
             freeSlot=buscarLibre(arrayPeliculas, MAX);
             validar++;
-            if(freeSlot != ILOGIC && validarDirector>0)
+            if(freeSlot != ILOGIC)
             {
                 getValidString("\n Ingrese nombre de la pelicula: ", "\nError. Solo se permiten letras, vuelva a ingresar el nombre: \n", auxNombre);
                 getValidString("\n Ingrese el nombre del director: ", "\nError, Solo se permiten letras, vuelva a ingresar el apellido: \n", auxDirector);
                 getValidString("\n Ingrese la nacionalidad: ", "\nError, Solo se permiten letras, vuelva a ingresar el apellido: \n", auxNacionalidad);
                 auxAno=getValidInt("\n Ingrese el anio: ", "\nError, el dato es invalido\n", 0, 2018);
-                addPelicula(arrayPeliculas, MAX, auxId, auxNombre, auxDirector, auxNacionalidad, auxAno);
-            }
-            else if (validarDirector==0)
-            {
-                 printf("\n No se ha ingresado el director \n");
-                 system("pause");
-                 system("cls");
             }
             else
             {
-                printf("\n No hay mas espacio \n");
-                system("pause");
-                system("cls");
+                 printf("\n No hay mas espacio para ingresar datos.- \n");
+                 system("pause");
+                 system("cls");
             }
-
+            addPelicula(arrayPeliculas, MAX, auxId, auxNombre, auxDirector, auxNacionalidad, auxAno);
             break;
             case 2:
             if (validar > 0)
-            {   mostrarPelicula(arrayPeliculas, MAX);
+            {
                 modificarPelicula(arrayPeliculas, MAX);
                 break;
             }
@@ -94,7 +79,7 @@ int main()
             break;
             case 3:
             if(validar > 0)
-            {   mostrarPelicula(arrayPeliculas, MAX);
+            {
                 bajaPelicula(arrayPeliculas, MAX, auxId);
             }
             else{
@@ -109,7 +94,6 @@ int main()
                 getValidString("\n Ingrese el nombre del director: ", "\nError. Solo se permiten letras, vuelva a ingresar el nombre: \n", auxNombreDirector);
                 getValidString("\n ingrese su pais de origen: ", "\nError, Solo se permiten letras, vuelva a ingresar el apellido: \n", auxPaisDirector);
                 auxFechaDirector=getValidInt("\n Ingrese el año de nacimiento (1900 - 2018): ", "\nError, el dato es invalido\n", 1900, 2018);
-                addDirector(arrayDirectores, MAXB, auxIdDirector, auxNombreDirector, auxPaisDirector, auxFechaDirector);
             }
             else
             {
@@ -117,15 +101,14 @@ int main()
                  system("pause");
                  system("cls");
             }
-
+            addDirector(arrayDirectores, MAXB, auxIdDirector, auxNombreDirector, auxPaisDirector, auxFechaDirector);
             break;
             case 5:
             if(validarDirector > 0)
-            {   mostrarDirector(arrayDirectores, MAXB);
+            {
                 bajaDirector(arrayDirectores, MAXB, auxIdDirector);
             }
             else{
-
                 printf("No hay datos para eliminar");
             }
             break;
@@ -145,14 +128,8 @@ int main()
                 system("pause");
                 system("cls");
                 break;
-                case 3:
-                peliculasViejas(arrayPeliculas, MAXB);
-
-                system("pause");
-                system("cls");
-                break;
-
                 }
+
             }
             else
             {

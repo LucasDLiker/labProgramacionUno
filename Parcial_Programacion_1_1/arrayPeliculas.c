@@ -125,7 +125,7 @@
 
         printf("\n Ingrese nombre: \n");
         scanf("%s", auxNombrePelicula);
-        printf("\n Ingrese  Director: \n");
+        printf("\n Ingrese  apellido: \n");
         scanf("%s", auxDirectorPelicula);
 
         printf("\n Ingrese nacionalidad: \n");
@@ -218,7 +218,7 @@
     {
         if(arrayPeliculas[i].isEmpty == 0)
         {
-            printf("%3d %10s %10s %15s %14d\n", arrayPeliculas[i].idPelicula, arrayPeliculas[i].nombrePelicula, arrayPeliculas[i].directorPelicula, arrayPeliculas[i].nacionalidadPelicula, arrayPeliculas[i].anoPelicula);
+            printf("%3d %10s %10s %15s %12d\n", arrayPeliculas[i].idPelicula, arrayPeliculas[i].nombrePelicula, arrayPeliculas[i].directorPelicula, arrayPeliculas[i].nacionalidadPelicula, arrayPeliculas[i].anoPelicula);
         }
     }
     ret = EMPTY;
@@ -249,12 +249,11 @@
     fflush(stdin);
     printf("1. Mostrar lista peliculas\n"
            "2. Mostrar lista directores\n"
-           "3. Mostrar pelicula mas vieja\n"
            "Ingrese una opcion: ");
     fflush(stdin);
     scanf("%d", &opcion);
 
-    while(opcion < 0 || opcion > 3)
+    while(opcion < 0 || opcion > 2)
     {
         printf("Por favor, ingrese una opcion valida\n");
         system("pause");
@@ -262,45 +261,9 @@
         fflush(stdin);
         printf( "1. Mostrar lista peliculas\n"
                 "2. Mostrar lista directores\n"
-                "3. Mostrar pelicula mas vieja\n"
                 "Ingrese una opcion: ");
         fflush(stdin);
         scanf("%d", &opcion);
     }
     return opcion;
 }
-
-void peliculasViejas(sPeliculas arrayPeliculas[], int capacidad)
-{
-    int promedio=0;
-    int total=0;
-    int contadorPeliculas=0;
-    int anoMasBajo;
-    int nombreViejo;
-    int i;
-    //int vectorNombres[];
-
-    for(i=0; i<capacidad; i++)
-    {
-        if(arrayPeliculas[i].isEmpty == 0)
-        {
-            contadorPeliculas++;
-            total= total + arrayPeliculas[i].anoPelicula;
-        }
-    }
-    promedio = total/contadorPeliculas;
-
-    for(i=0; i<capacidad; i++)
-    {
-        if(arrayPeliculas[i].isEmpty == 0)
-        {
-            if(arrayPeliculas[i].anoPelicula < promedio)
-            {
-                anoMasBajo=arrayPeliculas[i].anoPelicula;
-                nombreViejo=arrayPeliculas[i].nombrePelicula;
-            }//fin de if
-        }//fin de if
-    }//fin de for
-    printf("\n El año de la/s peliculas mas viejas es: %d\n", anoMasBajo);
-    printf("\n El nombre de la/s peliculas mas viejas es: %s\n", nombreViejo);
-}//fin de void

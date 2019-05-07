@@ -16,7 +16,7 @@ Informes:
 
 int main()
 {
-    int indice;
+   // int indice;
     int opcion;
 
     eEmpleado lista[T];
@@ -27,7 +27,7 @@ int main()
 
 
 
-hardcodearDatosEmpleados(lista,6);
+//hardcodearDatosEmpleados(lista,6);
     do
     {
         opcion = menuDeOpciones("1.Alta\n2.Baja\n3.Modificar\n4.Mostrar\n5.Informar\n10.Salir\nElija una opcion: ");
@@ -50,7 +50,7 @@ hardcodearDatosEmpleados(lista,6);
                 break;
             case 5:
 
-                mostrarEmpleadosSueldoMaximo(lista,T);
+                //mostrarEmpleadosSueldoMaximo(lista,T);
                 printf("La cantidad de carlos es: %d\n", contarCarlos(lista,T));
 
                 break;
