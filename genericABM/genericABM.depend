@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1557194549 source:c:\users\capitan hostias\desktop\abm\genericabm\main.c
+	"structUno.h"
+	"toolbox.h"
+
+1557194764 c:\users\capitan hostias\desktop\abm\genericabm\structuno.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+	"toolbox.h"
+
+1557187512 c:\users\capitan hostias\desktop\abm\genericabm\toolbox.h
+
+1557193808 source:c:\users\capitan hostias\desktop\abm\genericabm\structuno.c
+	"structUno.h"
+	"toolbox.h"
+
+1557187512 source:c:\users\capitan hostias\desktop\abm\genericabm\toolbox.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"toolbox.h"
+
