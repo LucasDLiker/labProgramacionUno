@@ -74,7 +74,7 @@ void inicializarEmpleados(eEmpleado lista[], int tam)
     }
 }
 
-void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
+/*void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
 {
     int i;
     int legajos[]={1,8,9,7,2,4};
@@ -96,7 +96,7 @@ void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
 
 
 
-}
+}*/
 
 
 

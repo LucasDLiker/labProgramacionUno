@@ -18,7 +18,7 @@ int main()
     inicializarEmpleados(lista,T);
 
 
-hardcodearDatosEmpleados(lista,4);
+//hardcodearDatosEmpleados(lista,4);
     do
     {
         opcion = menuDeOpciones("1.Alta\n2.Baja\n3.Modificar\n4.Mostrar\n5.Salir\nElija una opcion: ");
